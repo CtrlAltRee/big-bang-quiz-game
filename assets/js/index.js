@@ -70,12 +70,12 @@ function guess(id, guess) {
     }
 };
 
-// show quiz progress
+// create show progress function
 function showProgress() {
     let currentQuestionNumber = quiz.questionIndex + 1;
     let progressElement = document.getElementById("progress");
     progressElement.innerHTML = 
-    `Question ${currentQuestionNumber} of ${quiz.question.length}`;
+    `Question ${currentQuestionNumber} of ${quiz.questions.length}`;
 };
 
 // show score 
@@ -83,7 +83,7 @@ function showScores() {
     let quizEndHTML = 
     `
         <h1>Quiz Completed</h1>
-        <h2 id="score">You Scored: ${quiz.score} of ${quiz.question.length}</h2>
+        <h2 id="score">You Scored: ${quiz.score} of ${quiz.questions.length}</h2>
         <div class="quiz-repeat">
             <a href="../index.html">Take Quiz Again</a>       
         </div>
@@ -125,6 +125,37 @@ let questions = [
     ),
     new Question(
         "And finally, what major event happened in the series finale?", ["The elevator was finally fixed", "Amy revealed her pregnancy", "Howard and Bernadette announced their divorce", "Cinnamon ran away"], "The elevator was finally fixed"
-    ),
-    
-]
+    )
+];
+
+let quiz = new Quiz(questions);
+
+// display question, call function created above
+displayQuestion();
+
+
+// create countdown 
+let time = 12;
+// convert to minutes
+let quizTimeInMinutes = time * 60 * 60;
+let quizTime = quizTimeInMinutes / 60;
+
+let counting = document.getElementById("count-down");
+
+function startCountdown() {
+    let quizTimer = setInterval(function (){
+        // if countdown hits 0, stop timer and show scores
+        if (quizTime <= 0) {
+            clearInterval(quizTimer);
+            showScores();
+        } else {
+            // reduce timer by 1
+            quizTime--;
+            let sec = Math.floor(quizTime % 60);
+            let min = Math.floor(quizTime / 60) % 60;
+            counting.innerHTML = `Time: ${min} : ${sec}`;
+        }
+    }, 1000) 
+};
+
+startCountdown();
