@@ -18,7 +18,7 @@ body {
 .quiz-box {
     width: 395px;
     margin: 0 auto;
-    background-color: rgb(249, 247, 247);
+    background-color: rgb(249, 247, 247, 0.5);
     padding: 0.5rem 3rem 0.5rem 3rem;
     border: 3px solid #383B66; 
     /* #2E2637 deep purple */
@@ -89,6 +89,7 @@ body {
 .btn:hover {
     cursor: pointer;
     background-color: #E92A0C; 
+    border-color: #383B66;
     color: white;
 }
  
@@ -129,3 +130,22 @@ img {
     background-color: #E92A0C;
 }
 
+/* song */
+.audio {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+    background-color: white;
+}
+
+audio::-webkit-media-controls-play-button {
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #383B66;
+}
