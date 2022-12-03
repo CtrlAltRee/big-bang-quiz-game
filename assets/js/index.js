@@ -41,7 +41,7 @@ class Question {
 // display question
 function displayQuestion() {
     if (quiz.isEnded()) {
-        showsScores();
+        showScores();
     } else {
         // show question
         let questionElement = document.getElementById("question");
@@ -60,3 +60,36 @@ function displayQuestion() {
         showProgress();
     }
 };
+
+// create guess function
+function guess(id, guess) {
+    let button = document.getElementById(id);
+    button.onclick = function() {
+        quiz.guess(guess);
+        displayQuestion();
+    }
+};
+
+// show quiz progress
+function showProgress() {
+    let currentQuestionNumber = quiz.questionIndex + 1;
+    let progressElement = document.getElementById("progress");
+    progressElement.innerHTML = 
+    `Question ${currentQuestionNumber} of ${quiz.question.length}`;
+};
+
+// show score 
+function showScores() {
+    let quizEndHTML = 
+    `
+        <h1>Quiz Completed</h1>
+        <h2 id="score">You Scored: ${quiz.score} of ${quiz.question.length}</h2>
+        <div class="quiz-repeats">
+            <a href="../index.html">Take Quiz Again</a>       
+        </div>
+    `;
+    let quizElement = document.getElementById("quiz");
+    quizElement.innerHTML = quizEndHTML;
+};
+
+
