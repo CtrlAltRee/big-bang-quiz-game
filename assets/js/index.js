@@ -84,7 +84,7 @@ function showScores() {
     `
         <h1>Quiz Completed</h1>
         <h2 id="score">You Scored: ${quiz.score} of ${quiz.question.length}</h2>
-        <div class="quiz-repeats">
+        <div class="quiz-repeat">
             <a href="../index.html">Take Quiz Again</a>       
         </div>
     `;
@@ -93,3 +93,38 @@ function showScores() {
 };
 
 
+// create quiz questions
+let questions = [
+    // refer to Question class, parameters: text, choices, answer
+    new Question(
+        "All of these guys make up the main cast of geeky friends in the show, except for:", ["Sheldon Cooper", "Leonard Hofstadter", "Howard Wolowitz", "Wil Wheaton"], "Wil Wheaton"
+    ),
+    new Question(
+        "The four friends all work at this real-life university.", ["Stanford", "Caltech", "Harvard", "MIT"], "Caltech"
+    ),
+    new Question(
+        "Both Sheldon and Leonard are physicists, but of differing branches. Which kind of physicist is Sheldon?", ["Experimental physicist", "Theoretical physicist", "Biophysicist", "Astrophysicist"], "Theoretical physicist"
+    ),
+    new Question(
+        "In the beginning seasons, Penny worked as a waitress. Where did she work?", ["IHOP", "Denny\'s", "The Cheesecake Factory", "TGI Fridays"], "The Cheesecake Factory"
+    ),
+    new Question(
+        "What is the name of Sheldon's love interest in the show?", ["Dr. Amy Fisher", "Dr. Amy Fowler", "Dr. Amy Sanchez", "Dr. Amy Smith"], "Dr. Amy Fowler"
+    ),
+    new Question(
+        "What is Sheldon's favorite expression?", ["Eureka!", "Geronimo!", "Bazinga!", "Cowabunga!"], "Bazinga!"
+    ),
+    new Question(
+        "Can you finish the lyrics? \"Soft kitty, warm kitty…\"", ["Little ball of fur", "Love to pet your fur", "Love to hear you roar", "Lovely kitty, cuddly kitty"], "Little ball of fur"
+    ),
+    new Question(
+        "What is the name of Stuart's comic book store?", ["Galactic Quest", "Comic Book Central", "Kapow! Comics & Games", "The Comic Center of Pasadena"], "The Comic Center of Pasadena"
+    ),
+    new Question(
+        "Among the cast members, who actually majored in science and earned a doctorate degree?", ["Jim Parsons", "Johnny Galecki", "Mayim Bialik", "Kaley Cuoco"], "Mayim Bialik"
+    ),
+    new Question(
+        "And finally, what major event happened in the series finale?", ["The elevator was finally fixed", "Amy revealed her pregnancy", "Howard and Bernadette announced their divorce", "Cinnamon ran away"], "The elevator was finally fixed"
+    ),
+    
+]
