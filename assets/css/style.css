@@ -93,6 +93,10 @@ body {
     background-color: #EA9331; 
 }
 
+img {
+    width: 1.2rem;
+}
+
 /* score */
 #score {
     color: black;
@@ -120,4 +124,8 @@ body {
 
 .quiz-repeat a:hover {
     background-color: #E92A0C;
+}
+
+iframe {
+    margin: 0 auto;
 }
