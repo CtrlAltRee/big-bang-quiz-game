@@ -1,6 +1,6 @@
 #  ⚛ The Big Bang Theory Quiz ⚛
 ## Backstory 
-😂 I am a **BIG** fan of the tv show The Big Bang Theory. I have seen every episode (do not judge me). 
+😂 I am a **BIG** fan of the tv show The Big Bang Theory! I have seen every episode (do not judge me).  
 
 I have also seen every episode (up until season 6) of the prequel, Young Sheldon. 
 
@@ -19,6 +19,6 @@ Technologies Used: HTML, CSS, and JavaScript.
 ![screenshot](assets/images/big-bang-theory-ss.png)
 
 ## Links
-[Deployed Site](https://ctrlaltree.github.io/big-bang-quiz-game/) 👈🏽 check it out
+[Deployed Site](https://ctrlaltree.github.io/big-bang-quiz-game/) 👈🏽 Test Your Knowledge
 
 [GitHub Repo](https://github.com/CtrlAltRee/big-bang-quiz-game)
